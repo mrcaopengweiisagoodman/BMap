@@ -1,0 +1,55 @@
+@charset 'utf-8';
+
+*{
+    padding: 0;
+    margin: 0;
+}
+input[type='text']{
+    width: 116px;
+    height: 30px;
+    padding-left: 10px;
+    margin: 10px 0 0 10px;
+    border: 1px solid #ccc;
+}
+input[type='button']{
+    width: 50px;
+    height: 30px;
+}
+#container{
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    height: 80%;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+.BMapLib_bubble_top,.BMapLib_bubble_content,.BMapLib_nav{background: #fff;}
+.marker{
+    margin: 0 auto;
+    background: #fff;
+}
+/*信息框*/
+.BMapLib_SearchInfoWindow{text-align: center;}
+.BMapLib_bubble_title,.marker{
+    text-align: left;
+    padding: 5px;
+}
+.BMapLib_SearchInfoWindow ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.BMapLib_nav_tab_content li:first-of-type{
+    width: 100%;
+}
+.BMapLib_nav_tab_content li input[type='text']{
+    width: 80%;
+}
+.BMapLib_nav_tab_content li input[type='submit']{
+    width: 100%;
+    height: 30px;
+}
+.BMapLib_nav_tab_content li:nth-of-type(2) div{
+    width: 80%;
+}

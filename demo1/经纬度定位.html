@@ -84,9 +84,9 @@
     // 2、平移缩放控件
     map.addControl(new BMap.NavigationControl());
     // 3、缩略图控件
-    // map.addControl(new BMap.OverviewMapControl());//默认关闭
+    // map.addControl(new BMap.OverviewMapControl());
     map.addControl(new BMap.OverviewMapControl({ isOpen: true, anchor: BMAP_ANCHOR_BOTTOM_RIGHT }));   //右下角，打开
-
+    
     // 4、地图类型
     map.addControl(new BMap.MapTypeControl());
     // 5、定位控件
@@ -138,7 +138,7 @@
         })
         map.addOverlay(marker);//在地图上添加marker
         marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
-        
+
     }
     msgObj.showInfo();
 </script>
