@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>查询地址经纬度</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="css/lngandlat.css">
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=K0XhGL7kRtDpU8mcYd8YyK7mIRE7yCsb"></script>
+</head>
+<body>
+    <div class="box">   
+        要查询的地址：<input id="text_" type="text" value="天津-长虹公园" />
+        查询结果(经纬度)：<input id="result_" type="text" />
+        <input type="button" value="查询" class="submit" />
+        <div id="container"></div>
+    </div>
+</body>
+<script type="text/javascript" src="../common/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="js/lngandlat.js"></script>
+<script type="text/javascript">
+    $(function(){lngAndLatObj.obj_init();})
+</script>
+</html>

@@ -1,26 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-    <title>经纬度定位</title>
-    <link rel="stylesheet" type="text/css" href="css/atPosition.css">
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=K0XhGL7kRtDpU8mcYd8YyK7mIRE7yCsb"></script>
-    <script type="text/javascript" src="jquery-3.0.0.min.js"></script>
-    <!-- 解决信息窗口：BMapLib未定义 -->
-    <script type="text/javascript" src="http://api.map.baidu.com/library/TrafficControl/1.4/src/TrafficControl_min.js"></script>
-    <!-- 解决信息窗口：searchTypes数据元素未定义 -->
-    <script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
-</head>
-<body>
-    <div>   
-        经度：<input class="lng" type="text" placeholder="117.152988"/><br />
-        纬度：<input class="lat" type="text" placeholder='39.143366' />
-        <input type="button" value=" 查询 " class="search" />
-        <div id="container"></div>
-    </div>
-</body>
-<script type="text/javascript">
+const position = {};
+position.obj_init = () => {
 // 一、出现地图
     // 创建map实例，并给于地图的级别
     let map = new BMap.Map("container"),
@@ -64,7 +43,7 @@
             // 将新点设为地图的中心，并会已平滑的方式进入坐标点位置
             map.panTo(new_point);   
         }
-        showInfo();
+        msgObj.showInfo();
     }
     $('.search').click(theLocation);
 // 二、添加控件
@@ -95,7 +74,7 @@
     map.addControl(new BMap.CopyrightControl());
 
 // 三、信息窗口
-    const msgObj = {};
+    let msgObj = {};
     msgObj.showInfo = () => {
         // 3.1、信息对象
         let searchMsgWin = null,
@@ -141,6 +120,4 @@
 
     }
     msgObj.showInfo();
-</script>
-</html>
-
+}
